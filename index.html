@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+   <h2>تسجيل الدخول</h2>
+<form id="loginform">
+    <label form="username">اسم المسنخدم</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <!-- ///////////////////////// -->
+    <label form="username">كلمة المرور</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="submit" value="تسجيل الدخول">
+</form>
+<!-- ////////////////////////////////////////////// -->
+<script>
+    document.getElementById("loginform").addEventListener("submit" ,function(event) {
+        event.preventDefault();
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+    })
+        if (username === "jumanah" && password ==="1234"){
+            localStorage.setItem("username" ,username);
+            window.location.href = "index.html";
+        } else {
+            alert("اسم المستخدم او كلمة المرور غير صحيحهزحاول مره اخرى")
+        }
+</script>
+    <script src="./index.js"></script>
+</body>
+</html>
